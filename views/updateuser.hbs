@@ -1,0 +1,27 @@
+<h1>Update  Details</h1>
+{{#if msg}}
+<div class="alert">{{msg}}</div>
+{{/if}}
+{{#each rows}}
+
+<form method="post" action="/updateuser/{{this.idpersons}}" autocomplete="false">
+<div class="form-group">
+    <label for="idpersons">Id</label>
+    <input type="number" name="idpersons" value="{{this.idpersons}}">
+</div>
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{this.name}}">
+</div>
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" name="email" value="{{this.email}}">
+</div>
+<div class="form-group">
+    <button type="submit">Save</button>
+<a href="/">View All</a>
+</div>
+
+</form>
+
+{{/each}}

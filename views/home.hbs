@@ -1,0 +1,28 @@
+<h3>Add Details</h3>
+<p><a href="/adduser" class="add">Create</a></p>
+<table>
+   
+    <thead>
+        <tr>
+            <td>S.No</td>
+            <td>Name</td>
+            <td>Email</td>
+            
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each rows}}
+          <tr>
+            <td>{{this.idpersons}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td><a class="update" href="/updateuser/{{this.idpersons}}">Update</a></td>
+            <td><a class="Delete" href="/deleteuser/{{this.idpersons}}">Delete</a></td>
+    
+          </tr>
+        {{/each}}
+
+    </tbody>
+</table>
